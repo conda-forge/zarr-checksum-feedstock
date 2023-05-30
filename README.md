@@ -1,11 +1,11 @@
-About zarr-checksum
-===================
+About zarr-checksum-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zarr-checksum-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dandi/zarr_checksum
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zarr-checksum-feedstock/blob/main/LICENSE.txt)
 
 Summary: Checksum support for zarrs stored in various backends
 
