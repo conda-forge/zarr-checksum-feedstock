@@ -1,5 +1,5 @@
 {% set name = "zarr-checksum" %}
-{% set version = "0.2.9" %}
+{% set version = "0.2.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zarr_checksum-{{ version }}.tar.gz
-  sha256: a4919fc33a990c4716da12ee5bfb92997c15860cc610649cdacd04b7228b912f
+  sha256: 5da1f70e956fa8ca120e31d3c94da8cfd61802acc6e03e1cc4e9dffa2918cbd5
 
 build:
   entry_points:
