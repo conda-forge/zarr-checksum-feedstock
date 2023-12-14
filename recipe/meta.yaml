@@ -30,13 +30,15 @@ requirements:
     - pydantic >=2.0,<3.0
 
 test:
+  requires:
+    - pip
+    - pytest
   imports:
     - zarr_checksum
   commands:
     - pip check
     - zarrsum --help
-  requires:
-    - pip
+    - python -m pytest -vv --pyargs zarr_checksum
 
 about:
   home: https://github.com/dandi/zarr_checksum
