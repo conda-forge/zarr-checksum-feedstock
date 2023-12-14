@@ -144,4 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@AlmightyYakob](https://github.com/AlmightyYakob/)
+* [@jwodder](https://github.com/jwodder/)
+* [@yarikoptic](https://github.com/yarikoptic/)
 
