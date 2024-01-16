@@ -1,5 +1,5 @@
 {% set name = "zarr-checksum" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zarr_checksum-{{ version }}.tar.gz
-  sha256: be1038f1161603b55dc29c6322179904484bdc548685a19a2c8291d7d7bbe949
+  sha256: 074494feb4af3d2a91bca6ab8d46a63554c3498fc0428320052d772891a3c91b
 
 build:
   entry_points:
@@ -27,7 +27,6 @@ requirements:
     - zarr >=2.12,<3.0
     - click >=8.1.3,<9.0
     - tqdm >=4.64.1,<5.0
-    - pydantic >=2.0,<3.0
 
 test:
   requires:
@@ -48,6 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - AlmightyYakob
+    - jjnesbitt
     - jwodder
     - yarikoptic
