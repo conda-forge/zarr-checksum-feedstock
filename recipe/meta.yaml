@@ -1,5 +1,5 @@
 {% set name = "zarr-checksum" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zarr_checksum-{{ version }}.tar.gz
-  sha256: 074494feb4af3d2a91bca6ab8d46a63554c3498fc0428320052d772891a3c91b
+  sha256: e92772c5b1159bd147947e09cb62d774d32f19f6d8d41132ed4a881db9ed6198
 
 build:
   entry_points:
@@ -23,15 +23,15 @@ requirements:
     - pip
   run:
     - python >=3.7,<4.0
-    - boto3 >=1.24,<2.0
-    - zarr >=2.12,<3.0
     - click >=8.1.3,<9.0
     - tqdm >=4.64.1,<5.0
 
 test:
   requires:
+    - boto3 >=1.24,<2.0
     - pip
     - pytest
+    - zarr >=2.12,<3.0
   imports:
     - zarr_checksum
   commands:
