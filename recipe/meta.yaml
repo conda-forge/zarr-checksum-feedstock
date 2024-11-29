@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/zarr_checksum-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zarr_checksum-{{ version }}.tar.gz
   sha256: e92772c5b1159bd147947e09cb62d774d32f19f6d8d41132ed4a881db9ed6198
 
 build:
@@ -14,15 +14,15 @@ build:
     - zarrsum = zarr_checksum.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - click >=8.1.3,<9.0
     - tqdm >=4.64.1,<5.0
 
@@ -32,6 +32,7 @@ test:
     - pip
     - pytest
     - zarr >=2.12,<3.0
+    - python {{ python_min }}
   imports:
     - zarr_checksum
   commands:
